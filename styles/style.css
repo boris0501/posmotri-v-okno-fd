@@ -55,7 +55,7 @@ ol {
   column-gap: 32px;
   align-items: end;
   background: #1b1919;
-  margin: 211px 30px 133px;
+  margin: auto;
 }
 
 .result {
@@ -103,7 +103,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-font-family: 'Fira Sans Condensed';
+font-family: 'Fira Sans Condensed', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
@@ -139,7 +139,7 @@ color: #FFF;
   max-width: fit-content;
   font-family: inherit;
   font-size: inherit;
-  background-color: #000;
+  background-color: transparent;
   color: #fff;
   padding: 2.5px 13px 2.5px 0;
   border-width: 1px 0;
@@ -180,12 +180,16 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  align-self: flex-end;
   cursor: pointer;
 }
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 2px;
 }
 
 .button:hover {
@@ -198,22 +202,13 @@ background: #545050;
 }
 
 .search-form__submit-button {
-  align-items: end;
+  align-self: flex-end;
   min-width: 194px;
-}
-
-.search-form__submit-button:focus-visible {
-  outline: 1px solid #FFF;
-  outline-offset: 2px;
 }
 
 .more-button {
   width: 100%;
-}
-
-.more-button:focus-visible {
-  outline: 1px solid #FFF;
-  outline-offset: 2px;
+  margin-top: 30px;
 }
 
 .content__details {
@@ -222,7 +217,7 @@ background: #545050;
 }
 
 .title {
-font-family: Oswald;
+font-family: Oswald, sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 75px;
@@ -265,6 +260,8 @@ color: #545050;
 
 .content__card-link:hover {
   cursor: pointer;
+  text-decoration: underline solid #FFF;
+  text-underline-offset: 2px;
 }
 
 .content__card-link:active {
@@ -286,21 +283,20 @@ color: #545050;
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
   color: #FFF;
-}
-
-.content__video-card-title:hover {
-  text-decoration: underline;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -308,14 +304,10 @@ color: #545050;
   color: #FFF;
 }
 
-.content__video-card-description:hover {
-  text-decoration: underline;
-}
-
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
