@@ -283,6 +283,7 @@ color: #545050;
 }
 
 .content__video-card-title {
+  max-width: 196px;
   font-family: Oswald, sans-serif;
   font-style: normal;
   font-weight: 700;
